@@ -8,7 +8,7 @@ class CircleTest {
     Circle c = new Circle(1, "rojo");
 
     @Test
-    void probarConstructoresCircle(){
+    void probarConstructoresCircle() {
 
         Circle c1 = new Circle();
         Circle c2 = new Circle(1);
@@ -17,8 +17,8 @@ class CircleTest {
         assertNotNull(c1);
         assertNotNull(c2);
         assertNotNull(c3);
-
     }
+
     @Test
     void getRadius() {
         double rdo = c.getRadius();
@@ -56,6 +56,6 @@ class CircleTest {
         double area = c.getArea();
         double rdo = c.getRadius();
         assertNotEquals(area, 0L);
-        assertEquals(area, rdo*rdo*Math.PI, "El area no es la que deberia." );
+        assertEquals(area, rdo * rdo * Math.PI, "El area no es la que deberia.");
     }
 }
