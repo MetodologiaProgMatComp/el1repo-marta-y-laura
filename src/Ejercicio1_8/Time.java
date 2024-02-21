@@ -1,10 +1,10 @@
 package Ejercicio1_8;
 
-public class ClaseTime {
+public class Time {
     private int hour;
     private int minute;
     private int second;
-    public ClaseTime(int hour, int minute, int second) {
+    public Time(int hour, int minute, int second) {
         this.hour = hour;
         this.minute = minute;
         this.second = second;
@@ -33,7 +33,7 @@ public class ClaseTime {
     public void setSecond(int second) {
         this.second = second;
     }
-    public void setClaseTime(int hour,int minute,int second) {
+    public void setTime(int hour,int minute,int second) {
         this.hour = hour;
         this.minute = minute;
         this.second = second;
@@ -41,9 +41,9 @@ public class ClaseTime {
 
     @Override
     public String toString() {
-        return "ClaseTime[" + "hour=" + hour + ", minute=" + minute + ", second=" + second + ']';
+        return hour+":"+minute+":"+second;
     }
-    public ClaseTime nextSecondTime(){
+    public Time nextSecond(){
         second++;
         if (second>= 60){
             second=0;
@@ -59,7 +59,7 @@ public class ClaseTime {
         return this;
     }
 
-    public ClaseTime previusSecond(){
+    public Time previousSecond(){
         second--;
         if (second<0){
             second=59;

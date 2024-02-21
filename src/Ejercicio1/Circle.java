@@ -30,7 +30,7 @@ public class Circle {
         this.color = color;
     }
     public String toString(){
-        return "[radius=" + radius + " color=" + color + "]";    }
+        return "[radius="+radius+", color="+color+"]";    }
 
     public double getArea() {
         return radius*radius*Math.PI;

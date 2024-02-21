@@ -56,16 +56,14 @@ public class Ball {
     }
     public void move(){
         x+=xDelta;
-        y=yDelta;
+        y+=yDelta;
+        setX(x);
+        setY(y);
     }
-    public void reflectHorizontal(){
-        xDelta = -xDelta;
-    }
-    public void reflectVertical(){
-        yDelta = -yDelta;
-    }
+    public void reflectHorizontal(){setXDelta(-xDelta);}
+    public void reflectVertical(){setYDelta(-yDelta);     }
 
     public String toString(){
-        return "Ball[("+x+","+y+")], speed=("+xDelta+","+yDelta+")]";
+        return "Ball[("+x+","+y+"), speed=("+xDelta+","+yDelta+")]";
     }
 }

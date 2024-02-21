@@ -28,7 +28,7 @@ class Circle2Test {
     }
 
     @Test
-    void getCircunferencia() {
+    void getCircumference() {
         Circle2 miObjeto=new Circle2(4d);
         double circunferencia= 2*4*Math.PI;
         assertEquals(circunferencia,miObjeto.getCircumference());
@@ -40,7 +40,7 @@ class Circle2Test {
         double radius=4.3d;
         Circle2 s=new Circle2();
         s.setRadius(radius);
-        String salidaEsperada="Circle[radius is =4.3]";
+        String salidaEsperada= "Circle[radius is 4.3]";
         assertEquals(salidaEsperada,s.toString(),"No sale el mismo texto en toString");
     }
 }

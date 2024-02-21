@@ -33,6 +33,7 @@ public class Rectangle {
         return 2*length+2*width;
     }
     public String toString(){
-        return "[length=" + length + " width=" + width + "]";    }
+        return "[length = "+length+", width = "+width+"]";
+    }
 
 }
