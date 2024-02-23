@@ -48,7 +48,7 @@ class CircleTest {
     void ToString() {
         double radius = c.getRadius();
         String color = c.getColor();
-        assertEquals("[radius=" + radius + " color=" + color + "]", "[radius= 1 color= rojo ]");
+        assertEquals("[radius= "+radius+", color= "+color+"]", "[radius= 1, color= rojo ]");
     }
 
     @Test
@@ -56,6 +56,6 @@ class CircleTest {
         double area = c.getArea();
         double rdo = c.getRadius();
         assertNotEquals(area, 0L);
-        assertEquals(area, rdo * rdo * Math.PI, "El area no es la que deberia.");
+        assertEquals(area, rdo * rdo * Math.PI, "El area no es la que debería.");
     }
 }

@@ -21,7 +21,7 @@ public class Circle2 {
         return radius*Math.PI;
     }
     public String toString(){
-        return "Circle[radius is =" + radius + " area is  =" + getArea() + "circumference is=" + getCircumference() + "]";
+        return "Circle[radius is = "+radius+"]";
     }
 }
 
