@@ -2,8 +2,8 @@ package Ejercicio2_7;
 import Ejercicio2_6.*;
 public class MainMyLine {
     public static void main(String[] args) {
-        MyLine li = new MyLine(1,1,4,3);
-        MyPoint b = new MyPoint(1,2);
+        MyLine li = new MyLine(1,1,8,9);
+        MyPoint b = new MyPoint(1,1);
         MyPoint e = new MyPoint(8,9);
         System.out.println(li);
         li.setBegin(b); // Test setters
