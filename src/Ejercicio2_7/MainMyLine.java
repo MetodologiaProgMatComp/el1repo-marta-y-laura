@@ -3,8 +3,8 @@ import Ejercicio2_6.*;
 public class MainMyLine {
     public static void main(String[] args) {
         MyLine li = new MyLine(1,1,8,9);
-        MyPoint b = new MyPoint(1,1);
-        MyPoint e = new MyPoint(8,9);
+        MyPoint b = new MyPoint(3,4);
+        MyPoint e = new MyPoint(7,8);
         System.out.println(li);
         li.setBegin(b); // Test setters
         li.setEnd(e);
