@@ -8,10 +8,6 @@ class MyLineTest {
     MyPoint b= new MyPoint(1,1);
     MyPoint e= new MyPoint(7,8);
     MyLine li= new MyLine(b,e);
-    void probarConstructoresBall() {
-        MyLine li= new MyLine(b,e);
-        assertNotNull(li);
-    }
     @Test
     void getBegin() {
         MyPoint be = li.getBegin();

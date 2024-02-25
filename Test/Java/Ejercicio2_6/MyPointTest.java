@@ -1,15 +1,10 @@
 package Ejercicio2_6;
 
-import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class MyPointTest {
     MyPoint p= new MyPoint(4,2);
-    void probarConstructores() {
-        MyPoint p= new MyPoint(4,2);
-        assertNotNull(p);
-    }
     @org.junit.jupiter.api.Test
     void getX() {
         int x = p.getX();
