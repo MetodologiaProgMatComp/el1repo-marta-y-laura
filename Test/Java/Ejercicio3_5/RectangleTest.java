@@ -16,6 +16,7 @@ class RectangleTest {
     @Test
     void getLength() {
         double len = r.getLength();
+        constructores();
         assertEquals(len, 4);
         assertTrue((len > 0), "Error, es menor o igual a 0");
     }

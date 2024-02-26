@@ -8,7 +8,7 @@ class MyPointTest {
     @org.junit.jupiter.api.Test
     void getX() {
         int x = p.getX();
-        assertNotEquals(x, 4);
+        assertEquals(x, 4);
         assertTrue((x > 0), "Error, es menor o igual a 0");
     }
 
@@ -21,7 +21,7 @@ class MyPointTest {
     @org.junit.jupiter.api.Test
     void getY() {
         int y = p.getY();
-        assertNotEquals(y, 2);
+        assertEquals(y, 2);
         assertTrue((y > 0), "Error, es menor o igual a 0");
     }
 

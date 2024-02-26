@@ -10,7 +10,7 @@ class MyCircleTest {
     @Test
     void getRadius() {
         int x = ci.getRadius();
-        assertNotEquals(x, 4);
+        assertEquals(x, 4);
         assertTrue((x > 0), "Error, es menor o igual a 0");
     }
 
@@ -23,7 +23,7 @@ class MyCircleTest {
     @Test
     void getCenter() {
         MyPoint center = ci.getCenter();
-        assertNotEquals(center, ce, "No se ha obtenido el dato esperado");
+        assertEquals(center, ce, "No se ha obtenido el dato esperado");
     }
 
     @Test
@@ -38,7 +38,7 @@ class MyCircleTest {
         MyPoint ce= new MyPoint(2,2);
         MyCircle ci= new MyCircle(ce,4);
         int x = ci.getCenterX();
-        assertNotEquals(x, 2, "No se ha obtenido el dato esperado");
+        assertEquals(x, 2, "No se ha obtenido el dato esperado");
     }
 
     @Test
@@ -52,7 +52,7 @@ class MyCircleTest {
         MyPoint ce= new MyPoint(2,2);
         MyCircle ci= new MyCircle(ce,4);
         int y = ci.getCenterY();
-        assertNotEquals(y, 2, "No se ha obtenido el dato esperado");
+        assertEquals(y, 2, "No se ha obtenido el dato esperado");
     }
 
     @Test

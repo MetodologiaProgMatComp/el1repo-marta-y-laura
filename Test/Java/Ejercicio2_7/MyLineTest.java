@@ -11,7 +11,7 @@ class MyLineTest {
     @Test
     void getBegin() {
         MyPoint be = li.getBegin();
-        assertNotEquals(be, b, "No se ha obtenido el dato esperado");
+        assertEquals(be, b, "No se ha obtenido el dato esperado");
     }
 
     @Test
@@ -27,7 +27,7 @@ class MyLineTest {
         MyPoint e= new MyPoint(7,8);
         MyLine li= new MyLine(b,e);
         MyPoint end = li.getEnd();
-        assertNotEquals(end, e, "No se ha obtenido el dato esperado");
+        assertEquals(end, e, "No se ha obtenido el dato esperado");
     }
 
     @Test
@@ -43,7 +43,7 @@ class MyLineTest {
         MyPoint e= new MyPoint(7,8);
         MyLine li= new MyLine(b,e);
         int x = li.getBeginX();
-        assertNotEquals(x, 1, "No se ha obtenido el dato esperado");
+        assertEquals(x, 1, "No se ha obtenido el dato esperado");
     }
 
     @Test
@@ -58,7 +58,7 @@ class MyLineTest {
         MyPoint e= new MyPoint(7,8);
         MyLine li= new MyLine(b,e);
         int y = li.getBeginY();
-        assertNotEquals(y, 1, "No se ha obtenido el dato esperado");
+        assertEquals(y, 1, "No se ha obtenido el dato esperado");
     }
 
     @Test
@@ -73,7 +73,7 @@ class MyLineTest {
         MyPoint e= new MyPoint(7,8);
         MyLine li= new MyLine(b,e);
         int x = li.getEndX();
-        assertNotEquals(x, 7, "No se ha obtenido el dato esperado");
+        assertEquals(x, 7, "No se ha obtenido el dato esperado");
     }
 
     @Test
@@ -88,7 +88,7 @@ class MyLineTest {
         MyPoint e= new MyPoint(7,8);
         MyLine li= new MyLine(b,e);
         int y = li.getEndY();
-        assertNotEquals(y, 8, "No se ha obtenido el dato esperado");
+        assertEquals(y, 8, "No se ha obtenido el dato esperado");
     }
 
     @Test

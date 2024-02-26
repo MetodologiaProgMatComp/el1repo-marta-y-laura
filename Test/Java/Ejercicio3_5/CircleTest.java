@@ -16,6 +16,7 @@ class CircleTest {
 
     @Test
     void getRadius() {
+        constructores();
         Circle miObjeto=new Circle(3);
         assertTrue(miObjeto.getRadius()>0);
         assertEquals(3,miObjeto.getRadius(),"No ha devuelto el radio adecuado");
