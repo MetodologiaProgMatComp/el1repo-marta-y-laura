@@ -12,9 +12,9 @@ public class MainAccount {
 
         a1.credit(100);
         System.out.println(a1);
-        a1.debit(50);
+        //a1.debit(50);
         System.out.println(a1);
-        a1.debit(500); // debit() error
+        //a1.debit(500); // debit() error
         System.out.println(a1);
 
         a1.transferTo(a2, 100); // toString()

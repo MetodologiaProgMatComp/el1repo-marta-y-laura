@@ -1,12 +1,11 @@
 package Ejercicio1_9;
-
-import Ejercicio1_3.Rectangle;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class BallTest {
     Ball b= new Ball(4,2, 5, 1,1);
+    @Test
     void probarConstructoresBall() {
         Ball b= new Ball(4,2, 5, 1,1);
         assertNotNull(b);

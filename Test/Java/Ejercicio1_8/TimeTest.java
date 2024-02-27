@@ -5,6 +5,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TimeTest {
+    @Test
+    void constructor(){
+        Time t = new Time(2,50,30);
+        assertNotNull(t);
+    }
 
     @Test
     void getHour() {
@@ -64,14 +69,14 @@ class TimeTest {
     @Test
     void nextSecond() {
         Time miObjeto = new Time(2, 50, 30);
-        assertDoesNotThrow(() -> miObjeto.nextSecond());
+        assertDoesNotThrow(miObjeto::nextSecond);
         assertEquals(31, miObjeto.getSecond(), "Mal nextSecondTime");
     }
 
     @Test
     void previousSecond() {
         Time miObjeto = new Time(2, 50, 30);
-        assertDoesNotThrow(() -> miObjeto.previousSecond());
+        assertDoesNotThrow(miObjeto::previousSecond);
         assertEquals(29, miObjeto.getSecond(), "Mal previusSecond");
     }
 }

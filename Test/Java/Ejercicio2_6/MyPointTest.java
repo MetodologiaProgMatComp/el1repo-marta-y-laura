@@ -1,19 +1,21 @@
 package Ejercicio2_6;
 
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class MyPointTest {
     MyPoint p= new MyPoint(4,2);
-    void probarConstructores() {
+    @Test
+    void constructor(){
         MyPoint p= new MyPoint(4,2);
         assertNotNull(p);
     }
-    @org.junit.jupiter.api.Test
+    @Test
     void getX() {
         int x = p.getX();
-        assertNotEquals(x, 4);
+        assertEquals(x, 4);
         assertTrue((x > 0), "Error, es menor o igual a 0");
     }
 
@@ -26,7 +28,7 @@ class MyPointTest {
     @org.junit.jupiter.api.Test
     void getY() {
         int y = p.getY();
-        assertNotEquals(y, 2);
+        assertEquals(y, 2);
         assertTrue((y > 0), "Error, es menor o igual a 0");
     }
 

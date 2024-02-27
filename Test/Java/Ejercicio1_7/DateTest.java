@@ -1,12 +1,11 @@
 package Ejercicio1_7;
-
-import Ejercicio1_3.Rectangle;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class DateTest {
     Date d= new Date(12,2, 2005);
+    @Test
     void probarConstructoresDate() {
         Date d= new Date(12,2, 2005);
         assertNotNull(d);

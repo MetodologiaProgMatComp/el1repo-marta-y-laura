@@ -1,57 +1,55 @@
-package Ejercicio2_7;
-import Ejercicio2_6.*;
+package Ejercicio4_1;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MyLineTest {
-    MyPoint b= new MyPoint(1,1);
-    MyPoint e= new MyPoint(7,8);
-    MyLine li= new MyLine(b,e);
+class LineTest {
+    Point b= new Point(1,1);
+    Point e= new Point(7,8);
+    Line li= new Line(b,e);
+    Line li2= new Line(1,1,7,8);
     @Test
-    void constructor(){
-        MyPoint b= new MyPoint(1,1);
-        MyPoint e= new MyPoint(7,8);
-        MyLine li= new MyLine(b,e);
-
+    void constructors(){
         assertNotNull(b);
         assertNotNull(e);
         assertNotNull(li);
+        assertNotNull(li2);
     }
     @Test
     void getBegin() {
-        MyPoint be = li.getBegin();
+        Point be = li.getBegin();
         assertEquals(be, b, "No se ha obtenido el dato esperado");
     }
 
     @Test
     void setBegin() {
-        MyPoint t= new MyPoint(3,2);
+        Point t= new Point(3,2);
         li.setBegin(t);
         assertEquals(li.getBegin(), t, "El punto de inicio no ha cambiado.");
     }
 
     @Test
     void getEnd() {
-        MyPoint b= new MyPoint(1,1);
-        MyPoint e= new MyPoint(7,8);
-        MyLine li= new MyLine(b,e);
-        MyPoint end = li.getEnd();
+        Point b= new Point(1,1);
+        Point e= new Point(7,8);
+        Line li= new Line(b,e);
+        Point end = li.getEnd();
         assertEquals(end, e, "No se ha obtenido el dato esperado");
     }
 
     @Test
     void setEnd() {
-        MyPoint i= new MyPoint(9,12);
+        Point i= new Point(9,12);
         li.setEnd(i);
         assertEquals(li.getEnd(), i, "El punto final no ha cambiado.");
     }
 
     @Test
     void getBeginX() {
-        MyPoint b= new MyPoint(1,1);
-        MyPoint e= new MyPoint(7,8);
-        MyLine li= new MyLine(b,e);
+        Point b= new Point(1,1);
+        Point e= new Point(7,8);
+        Line li= new Line(b,e);
         int x = li.getBeginX();
         assertEquals(x, 1, "No se ha obtenido el dato esperado");
     }
@@ -64,9 +62,9 @@ class MyLineTest {
 
     @Test
     void getBeginY() {
-        MyPoint b= new MyPoint(1,1);
-        MyPoint e= new MyPoint(7,8);
-        MyLine li= new MyLine(b,e);
+        Point b= new Point(1,1);
+        Point e= new Point(7,8);
+        Line li= new Line(b,e);
         int y = li.getBeginY();
         assertEquals(y, 1, "No se ha obtenido el dato esperado");
     }
@@ -79,9 +77,9 @@ class MyLineTest {
 
     @Test
     void getEndX() {
-        MyPoint b= new MyPoint(1,1);
-        MyPoint e= new MyPoint(7,8);
-        MyLine li= new MyLine(b,e);
+        Point b= new Point(1,1);
+        Point e= new Point(7,8);
+        Line li= new Line(b,e);
         int x = li.getEndX();
         assertEquals(x, 7, "No se ha obtenido el dato esperado");
     }
@@ -94,9 +92,9 @@ class MyLineTest {
 
     @Test
     void getEndY() {
-        MyPoint b= new MyPoint(1,1);
-        MyPoint e= new MyPoint(7,8);
-        MyLine li= new MyLine(b,e);
+        Point b= new Point(1,1);
+        Point e= new Point(7,8);
+        Line li= new Line(b,e);
         int y = li.getEndY();
         assertEquals(y, 8, "No se ha obtenido el dato esperado");
     }
@@ -109,9 +107,9 @@ class MyLineTest {
 
     @Test
     void getBeginXY() {
-        MyPoint b= new MyPoint(1,1);
-        MyPoint e= new MyPoint(7,8);
-        MyLine li= new MyLine(b,e);
+        Point b= new Point(1,1);
+        Point e= new Point(7,8);
+        Line li= new Line(b,e);
         assertEquals(li.getBeginXY()[0], 1);
         assertEquals(li.getBeginXY()[1], 1);
     }
@@ -125,33 +123,33 @@ class MyLineTest {
 
     @Test
     void getEndXY() {
-        MyPoint b= new MyPoint(1,1);
-        MyPoint e= new MyPoint(7,8);
-        MyLine li= new MyLine(b,e);
+        Point b= new Point(1,1);
+        Point e= new Point(7,8);
+        Line li= new Line(b,e);
         assertEquals(li.getEndXY()[0], 7);
         assertEquals(li.getEndXY()[1], 8);
     }
 
     @Test
     void setEndXY() {
-        li.setBeginXY(8,9);
+        li.setEndXY(8,9);
         assertEquals(li.getEndY(),  9, "La coordenada y del punto final no ha cambiado.");
         assertEquals(li.getEndX(), 8, "La coordenada x del punto final no ha cambiado.");
     }
 
     @Test
     void getLength() {
-        MyPoint b= new MyPoint(1,5);
-        MyPoint e= new MyPoint(5,8);
-        MyLine li= new MyLine(b,e);
+        Point b= new Point(1,5);
+        Point e= new Point(5,8);
+        Line li= new Line(b,e);
         assertEquals(li.getLength(),  5, "La distancia no es la esperada.");
     }
 
     @Test
     void getGradient() {
-        MyPoint b= new MyPoint(1,5);
-        MyPoint e= new MyPoint(91,20);
-        MyLine li= new MyLine(b,e);
+        Point b= new Point(1,5);
+        Point e= new Point(91,20);
+        Line li= new Line(b,e);
         assertEquals(li.getGradient(),  0.16514867741462683, "La distancia no es la esperada.");
     }
 
@@ -159,7 +157,7 @@ class MyLineTest {
     void testToString() {
         li.setBeginXY(4,2);
         li.setEndXY(7,8);
-        String salidaEsperada= "MyLine[begin = (4,2), end = (7,8)]";
+        String salidaEsperada= "Line[begin = (4,2), end = (7,8)]";
         assertEquals(li.toString(),salidaEsperada,"No sale el mismo texto en toString");
     }
 }
