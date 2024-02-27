@@ -23,7 +23,7 @@ public class Point3D extends Point2D{
         setY(y);
         setZ(z);
     }
-    public float[] getXY(){
+    public float[] getXYZ(){
         float[] result=new float[3];
         result[0]=getX();
         result[1]=getY();

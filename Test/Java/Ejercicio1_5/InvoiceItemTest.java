@@ -7,10 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class InvoiceItemTest {
     InvoiceItem i= new InvoiceItem("A101", "Pen Red", 888, 0.08);
-    void probarConstructoresItem() {
-        InvoiceItem i = new InvoiceItem("A101", "Pen Red", 888, 0.08);
-        assertNotNull(i);
-    }
 
     @Test
     void getId() {

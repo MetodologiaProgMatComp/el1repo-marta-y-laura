@@ -1,9 +1,9 @@
 package Ejercicio2_5;
 
 public class Main2_5 {
-    public static void main(String[]args){
+   /** public static void main(String[]args){
         //Customer
-        Customer miObjeto=new Customer(200,"Marta", 15);
+        Customer1 miObjeto=new Customer1(200,"Marta", 15);
 
         //Account
         Account miObjeto2=new Account(200, miObjeto,150 );
@@ -19,4 +19,5 @@ public class Main2_5 {
         miObjeto2.withdraw(300);
         System.out.println("La info despues de la substracción es:" +miObjeto2);
     }
+}**/
 }

@@ -18,7 +18,7 @@ public class Cylinder extends Circle {
 
     // Constructor with default color, but given radius, height
     public Cylinder(double radius, double height) {
-        super(); // call superclass constructor Circle(r)
+        super(radius); // call superclass constructor Circle(r)
         this.height = height;
     }
 
@@ -29,8 +29,8 @@ public class Cylinder extends Circle {
 
     // A public method for computing the volume of cylinder
     // use superclass method getArea() to get the base area
-    public double getVolume() {
-        return getArea() * height;
+    public double getVolume(double radio) {
+        return this.getArea() * this.height;
     }
 
     @Override

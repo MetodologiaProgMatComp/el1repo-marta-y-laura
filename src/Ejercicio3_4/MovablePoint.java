@@ -11,6 +11,7 @@ public class MovablePoint extends Point{
     }
 
     public MovablePoint(float xSpeed, float ySpeed) {
+        super();
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
     }

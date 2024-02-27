@@ -1,13 +1,13 @@
 package Ejercicio3_1;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args, double radio){
         Cylinder c1 = new Cylinder();
         System.out.println("Cylinder:"
                 + " radius=" + c1.getRadius()
                 + " height=" + c1.getHeight()
                 + " base area=" + c1.getArea()
-                + " volume=" + c1.getVolume());
+                + " volume=" + c1.getVolume(radio));
 
         // Declare and allocate a new instance of cylinder
         // specifying height, with default color and radius
@@ -16,7 +16,7 @@ public class Main {
                 + " radius=" + c2.getRadius()
                 + " height=" + c2.getHeight()
                 + " base area=" + c2.getArea()
-                + " volume=" + c2.getVolume());
+                + " volume=" + c2.getVolume(radio));
 
         // Declare and allocate a new instance of cylinder
         // specifying radius and height, with default color
@@ -25,6 +25,6 @@ public class Main {
                 + " radius=" + c3.getRadius()
                 + " height=" + c3.getHeight()
                 + " base area=" + c3.getArea()
-                + " volume=" + c3.getVolume());
+                + " volume=" + c3.getVolume(radio));
     }
 }
