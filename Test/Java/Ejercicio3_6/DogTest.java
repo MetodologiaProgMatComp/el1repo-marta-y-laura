@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DogTest {
     Dog d = new Dog("Bone");
+    @Test
     void constructor(){
         Dog d = new Dog("Bone");
         assertNotNull(d);
@@ -13,7 +14,6 @@ class DogTest {
 
     @Test
     void greets() {
-        constructor();
         d.greets();
     }
 

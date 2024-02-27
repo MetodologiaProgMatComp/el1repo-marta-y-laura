@@ -1,11 +1,18 @@
 package Ejercicio2_6;
 
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class MyPointTest {
     MyPoint p= new MyPoint(4,2);
-    @org.junit.jupiter.api.Test
+    @Test
+    void constructor(){
+        MyPoint p= new MyPoint(4,2);
+        assertNotNull(p);
+    }
+    @Test
     void getX() {
         int x = p.getX();
         assertEquals(x, 4);

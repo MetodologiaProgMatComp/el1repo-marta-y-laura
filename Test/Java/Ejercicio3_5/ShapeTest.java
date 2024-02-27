@@ -7,6 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class ShapeTest {
     Shape s= new Shape("red", true);
     @Test
+    void constructor(){
+        assertNotNull(s);
+    }
+    @Test
     void getColor() {
         assertEquals(s.getColor(), "red", "El color obtenido no es el esperado.");
     }

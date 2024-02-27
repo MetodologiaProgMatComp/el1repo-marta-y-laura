@@ -8,6 +8,11 @@ class MyCircleTest {
     MyPoint ce= new MyPoint(2,2);
     MyCircle ci= new MyCircle(ce,4);
     @Test
+    void constructor(){
+        assertNotNull(ce);
+        assertNotNull(ci);
+    }
+    @Test
     void getRadius() {
         int x = ci.getRadius();
         assertEquals(x, 4);

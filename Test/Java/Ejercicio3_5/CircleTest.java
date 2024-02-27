@@ -8,7 +8,8 @@ class CircleTest {
     Circle c = new Circle();
     Circle c2 = new Circle(3);
     Circle c3 = new Circle(2,"blue", true);
-    void constructores(){
+    @Test
+    void constructors(){
         assertNotNull(c);
         assertNotNull(c2);
         assertNotNull(c3);
@@ -16,7 +17,6 @@ class CircleTest {
 
     @Test
     void getRadius() {
-        constructores();
         Circle miObjeto=new Circle(3);
         assertTrue(miObjeto.getRadius()>0);
         assertEquals(3,miObjeto.getRadius(),"No ha devuelto el radio adecuado");

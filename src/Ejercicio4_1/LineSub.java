@@ -1,4 +1,4 @@
-package Ejercicio3_7;
+package Ejercicio4_1;
 
 public class LineSub extends Point{
     Point end; // Ending point

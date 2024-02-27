@@ -1,4 +1,4 @@
-package Ejercicio3_7;
+package Ejercicio4_1;
 
 import org.junit.jupiter.api.Test;
 
@@ -9,6 +9,7 @@ class LineTest {
     Point e= new Point(7,8);
     Line li= new Line(b,e);
     Line li2= new Line(1,1,7,8);
+    @Test
     void constructors(){
         assertNotNull(b);
         assertNotNull(e);
@@ -17,7 +18,6 @@ class LineTest {
     }
     @Test
     void getBegin() {
-        constructors();
         Point be = li.getBegin();
         assertEquals(be, b, "No se ha obtenido el dato esperado");
     }

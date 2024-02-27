@@ -1,4 +1,4 @@
-package Ejercicio3_7;
+package Ejercicio4_1;
 
 import org.junit.jupiter.api.Test;
 
@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PointTest {
     Point p = new Point(3, 5);
-
+    @Test
     void constructor() {
         Point p = new Point(3, 5);
         assertNotNull(p);
@@ -14,7 +14,6 @@ class PointTest {
 
     @Test
     void testToString() {
-        constructor();
         assertEquals(p.toString(), "Point: (3,5)", "No se ha obtenido la salida esperada.");
     }
 

@@ -8,7 +8,8 @@ class RectangleTest {
     Rectangle r= new Rectangle(4,2, "blue", true);
     Rectangle r2 = new Rectangle();
     Rectangle r3 = new Rectangle(2,3);
-    void constructores(){
+    @Test
+    void constructors(){
         assertNotNull(r);
         assertNotNull(r2);
         assertNotNull(r3);
@@ -16,7 +17,6 @@ class RectangleTest {
     @Test
     void getLength() {
         double len = r.getLength();
-        constructores();
         assertEquals(len, 4);
         assertTrue((len > 0), "Error, es menor o igual a 0");
     }

@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MammalTest {
+    @Test
     void constructor(){
         Mammal m = new Mammal("Ciervo");
         assertNotNull(m);

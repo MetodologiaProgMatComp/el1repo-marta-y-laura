@@ -6,13 +6,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CatTest {
     Cat c = new Cat("Whiskers");
+    @Test
     void constructor(){
         Cat c = new Cat("Whiskers");
         assertNotNull(c);
     }
     @Test
-    void greets() {
-        constructor();
+     void greets() {
         greets();
     }
 

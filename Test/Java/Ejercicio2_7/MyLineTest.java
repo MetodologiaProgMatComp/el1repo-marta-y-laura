@@ -9,6 +9,16 @@ class MyLineTest {
     MyPoint e= new MyPoint(7,8);
     MyLine li= new MyLine(b,e);
     @Test
+    void constructor(){
+        MyPoint b= new MyPoint(1,1);
+        MyPoint e= new MyPoint(7,8);
+        MyLine li= new MyLine(b,e);
+
+        assertNotNull(b);
+        assertNotNull(e);
+        assertNotNull(li);
+    }
+    @Test
     void getBegin() {
         MyPoint be = li.getBegin();
         assertEquals(be, b, "No se ha obtenido el dato esperado");

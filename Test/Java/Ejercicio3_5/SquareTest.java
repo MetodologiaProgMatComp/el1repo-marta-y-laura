@@ -6,7 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SquareTest {
     Square s = new Square(4, "blue", true);
-    void constructores(){
+    @Test
+    void constructors(){
         Square s3 = new Square();
         Square s2 = new Square(3);
         Square s = new Square(4, "blue", true);

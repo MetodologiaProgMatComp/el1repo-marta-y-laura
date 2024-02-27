@@ -11,6 +11,13 @@ class MyTriangleTest {
     MyPoint v2 = new MyPoint(2,3);
     MyPoint v3 = new MyPoint(5,6);
     @Test
+    void constructor(){
+        assertNotNull(tri);
+        assertNotNull(v1);
+        assertNotNull(v2);
+        assertNotNull(v3);
+    }
+    @Test
     void testToString() {
         int x1 = v1.getX();
         int x2 = v2.getX();

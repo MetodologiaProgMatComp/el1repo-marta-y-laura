@@ -1,4 +1,4 @@
-package Ejercicio3_7;
+package Ejercicio4_1;
 
 public class Point {
     private int x;
