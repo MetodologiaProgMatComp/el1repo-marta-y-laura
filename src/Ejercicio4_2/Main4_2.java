@@ -1,6 +1,6 @@
 package Ejercicio4_2;
 
-public class Main3_8 {
+public class Main4_2 {
     public static void main(String[] arg){
         Circle c = new Circle(3, "red");
         Cylinder cy = new Cylinder();

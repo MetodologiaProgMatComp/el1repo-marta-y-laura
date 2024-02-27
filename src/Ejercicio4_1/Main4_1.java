@@ -1,6 +1,6 @@
 package Ejercicio4_1;
 
-public class Main3_7 {
+public class Main4_1 {
     public static void main(String[] args) {
         Point p= new Point(3,4);
         Point s= new Point(1,1);
