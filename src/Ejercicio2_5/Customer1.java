@@ -1,11 +1,11 @@
 package Ejercicio2_5;
 
-public class Customer {
+public class Customer1 {
     private int id;
     private String name;
     private char gender;
 
-    public Customer(int id, String name, int discount) {
+    public Customer1(int id, String name, char gender) {
         this.id = id;
         this.name = name;
         this.gender = gender;

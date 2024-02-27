@@ -5,7 +5,7 @@ public class Invoice {
     private Customer customer;
     private double amount;
 
-    public Invoice(int id, Customer name, double amount) {
+    public Invoice(int id, Customer customer, double amount) {
         this.id = id;
         this.customer = customer;
         this.amount = amount;
@@ -41,9 +41,8 @@ public class Invoice {
     }
     public double getAmountAfterDiscount(){
         int descuento=getCustomerDiscount();
-        double porcent= amount*(descuento/100);
-        double amountafter=amount-porcent;
-        return amountafter;
+        double porcent= amount * descuento / 100;
+        return amount-porcent;
     }
     @Override
     public String toString() {
