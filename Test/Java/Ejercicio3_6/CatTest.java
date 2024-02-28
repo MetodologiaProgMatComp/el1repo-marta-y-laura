@@ -13,7 +13,7 @@ class CatTest {
     }
     @Test
      void greets() {
-        greets();
+        assertEquals(c.greets(), "Woooof","No sale el mismo texto en toString");
     }
 
     @Test

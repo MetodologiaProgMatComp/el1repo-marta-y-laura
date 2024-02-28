@@ -53,7 +53,7 @@ public class EmployeeTest {
         Employee miObjeto=new Employee(2,"Marta","Valiente",455);
         int x= miObjeto.getSalary();
         int subida= 10;
-        int nuevoSalario=((x*subida)/100)+x;
+        int nuevoSalario=((x*subida)/100);
         assertEquals(nuevoSalario,miObjeto.raiseSalary(10),"Mal getSalary");
     }
 

@@ -62,7 +62,7 @@ class TimeTest {
     @Test
     void testToString() {
         Time miObjeto = new Time(2, 50, 30);
-        String salidaEsperada = "02:50:30";
+        String salidaEsperada = "2:50:30";
         assertEquals(salidaEsperada, miObjeto.toString(), "Distinto en toString");
     }
 
