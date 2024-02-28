@@ -1,10 +1,10 @@
 package Ejercicio6_3;
 
 public class MovablePoint implements Movable {
-    private int x;
-    private int y;
-    private final int xSpeed;
-    private final int ySpeed;
+    int x;
+    int y;
+    final int xSpeed;
+    final int ySpeed;
     public MovablePoint(int x, int y, int xSpeed, int ySpeed){
         this.x = x;
         this.y = y;
