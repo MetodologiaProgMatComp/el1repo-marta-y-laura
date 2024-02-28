@@ -1,11 +1,16 @@
 package Ejercicio3_1;
-import Ejercicio2_4.Customer;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CircleTest {
     Circle c= new Circle (2, "azul");
+    Circle c2 = new Circle(2);
+    @Test
+    void constructors(){
+        assertNotNull(c);
+        assertNotNull(c2);
+    }
 
     @Test
     void getRadius() {

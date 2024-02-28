@@ -6,6 +6,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Point2DTest {
     Point2D p2= new Point2D(2, 1);
+    Point2D p = new Point2D();
+    @Test
+    void constructos(){
+        assertNotNull(p);
+        assertNotNull(p2);
+    }
 
     @Test
     void getX() {
