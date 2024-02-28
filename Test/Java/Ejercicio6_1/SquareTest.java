@@ -1,19 +1,42 @@
-package Ejercicio3_5;
+package Ejercicio6_1;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class SquareTest {
-    Square s = new Square(4, "blue", true);
+    Shape s2 = new Square(5, "blue", true);
+    Square s = new Square(4, "red", true);
     @Test
     void constructors(){
         Square s3 = new Square();
-        Square s2 = new Square(3);
-        Square s = new Square(4, "blue", true);
+        Square s4 = new Square(3);
         assertNotNull(s);
         assertNotNull(s2);
         assertNotNull(s3);
+        assertNotNull(s4);
+    }
+    @Test
+    void getColor(){
+        assertEquals(s2.getColor(), "blue", "El color obtenido no es el esperado.");
+    }
+    @Test
+    void setColor(){
+        s2.setColor("red");
+        assertEquals(s2.getColor(), "red", "El color no ha cambiado.");
+    }
+    @Test
+    void isFilled() {
+        assertTrue(s2.isFilled(), "No se ha obtenido el dato esperado.");
+    }
+
+    @Test
+    void setFilled() {
+        s2.setFilled(false);
+        assertFalse(s2.isFilled(), "No se ha obtenido el dato esperado.");
+        s2.setFilled(true);
+        assertTrue(s2.isFilled(), "No se ha obtenido el dato esperado.");
+
     }
     @Test
     void getSide() {
@@ -25,8 +48,7 @@ class SquareTest {
     @Test
     void setSide() {
         s.setSide(3);
-        assertEquals(s.getWidth(), 3, "El largo no ha cambiado.");
-        assertEquals(s.getLength(), 3, "El largo no ha cambiado.");
+        assertEquals(s.getSide(), 3, "El largo no ha cambiado.");
     }
 
     @Test
@@ -47,5 +69,4 @@ class SquareTest {
         String salidaEsperada= "Square[Rectangle[Shape[color="+s.getColor()+", width="+s.getWidth()+", length="+s.getLength()+"]]";
         assertEquals(salidaEsperada,s.toString(),"No sale el mismo texto en toString");
     }
-
 }

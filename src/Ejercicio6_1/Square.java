@@ -1,4 +1,4 @@
-package Ejercicio3_5;
+package Ejercicio6_1;
 
 public class Square extends Rectangle{
     public Square(){}
@@ -12,12 +12,15 @@ public class Square extends Rectangle{
         return getWidth();
     }
     public void setSide(double side){
-        super.setWidth(side);
-        super.setLength(side);
+        setWidth(side);
+        setLength(side);
     }
+
+    @Override
     public void setWidth(double side){
         super.setWidth(side);
     }
+    @Override
     public void setLength(double side){
         super.setLength(side);
     }
