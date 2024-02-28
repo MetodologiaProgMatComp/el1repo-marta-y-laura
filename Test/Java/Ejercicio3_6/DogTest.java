@@ -15,7 +15,7 @@ class DogTest {
 
     @Test
     void greets() {
-        assertEquals(d.greets(), "Meow","No sale el mismo texto en toString");
+        assertEquals(d.greets(), "Woof","No sale el mismo texto en toString");
     }
 
     @Test

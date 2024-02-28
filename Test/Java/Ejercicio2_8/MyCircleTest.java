@@ -7,9 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class MyCircleTest {
     MyPoint ce= new MyPoint(2,2);
     MyCircle ci= new MyCircle(ce,4);
+    MyCircle c3 = new MyCircle();
     @Test
     void constructor(){
         assertNotNull(ce);
+        assertNotNull(c3);
         assertNotNull(ci);
     }
     @Test
@@ -108,6 +110,6 @@ class MyCircleTest {
         MyPoint ce= new MyPoint(2,2);
         MyCircle ci= new MyCircle(ce,4);
         MyCircle ci2= new MyCircle(ce,4);
-        assertEquals(ci.distance(ci2),  Math.sqrt(45), "La circunferencia no es la esperada.");
+        assertEquals(ci.distance(ci2),  0.0, "La circunferencia no es la esperada.");
     }
 }

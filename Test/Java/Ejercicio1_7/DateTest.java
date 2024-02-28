@@ -14,7 +14,7 @@ class DateTest {
     @Test
     void getDay() {
         int day = d.getDay();
-        assertNotEquals(day, 12);
+        assertEquals(day, 12);
         assertTrue((day > 0), "Error, es menor o igual a 0.");
         assertTrue((day <= 31), "Error, es mayor a 31.");
     }
@@ -22,7 +22,7 @@ class DateTest {
     @Test
     void getMonth() {
         int month = d.getMonth();
-        assertNotEquals(month, 2);
+        assertEquals(month, 2);
         assertTrue((month > 0), "Error, es menor o igual a 0.");
         assertTrue((month <= 12), "Error, es mayor a 12.");
     }
@@ -30,7 +30,7 @@ class DateTest {
     @Test
     void getYear() {
         int year = d.getDay();
-        assertNotEquals(year, 12);
+        assertEquals(year, 12);
         assertTrue((year >= 1900), "Error, es menor a 1999.");
         assertTrue((year <= 9999), "Error, es mayor a 9999.");
     }

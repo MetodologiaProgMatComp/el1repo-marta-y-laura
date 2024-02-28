@@ -6,8 +6,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MovablePointTest {
     MovablePoint mp= new MovablePoint(2,1,2, 1);
-
-
+    MovablePoint mp2 = new MovablePoint(2, 1);
+    @Test
+    void constructor(){
+        assertNotNull(mp);
+        assertNotNull(mp2);
+    }
     @Test
     void getxSpeed() {
         float xSpeed = mp.getxSpeed();

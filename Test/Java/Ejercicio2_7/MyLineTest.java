@@ -8,15 +8,13 @@ class MyLineTest {
     MyPoint b= new MyPoint(1,1);
     MyPoint e= new MyPoint(7,8);
     MyLine li= new MyLine(b,e);
+    MyLine li2 = new MyLine(1,1,7,8);
     @Test
     void constructor(){
-        MyPoint b= new MyPoint(1,1);
-        MyPoint e= new MyPoint(7,8);
-        MyLine li= new MyLine(b,e);
-
         assertNotNull(b);
         assertNotNull(e);
         assertNotNull(li);
+        assertNotNull(li2);
     }
     @Test
     void getBegin() {
@@ -134,7 +132,7 @@ class MyLineTest {
 
     @Test
     void setEndXY() {
-        li.setBeginXY(8,9);
+        li.setEndXY(8,9);
         assertEquals(li.getEndY(),  9, "La coordenada y del punto final no ha cambiado.");
         assertEquals(li.getEndX(), 8, "La coordenada x del punto final no ha cambiado.");
     }

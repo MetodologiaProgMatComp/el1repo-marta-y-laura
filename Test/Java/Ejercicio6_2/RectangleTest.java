@@ -25,7 +25,7 @@ class RectangleTest {
 
     @Test
     void testToString() {
-        String salidaEsperada=  "Rectangle[width="+5+", length="+2+"]";
+        String salidaEsperada=  "Rectangle[width="+5.0+", length="+2.0+"]";
         assertEquals(salidaEsperada,r.toString(),"No sale el mismo texto en toString");
     }
 }

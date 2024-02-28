@@ -7,9 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class InvoiceItemTest {
     InvoiceItem i= new InvoiceItem("A101", "Pen Red", 888, 0.08);
+    @Test
+    void constructor(){
+        assertNotNull(i);
+    }
 
     @Test
     void getId() {
+        InvoiceItem i= new InvoiceItem("A101", "Pen Red", 888, 0.08);
         String Id = i.getId();
         assertEquals("A101", Id, "El Id no es el esperado.");
 
@@ -24,14 +29,14 @@ class InvoiceItemTest {
     @Test
     void getQty() {
         float qty = i.getQty();
-        assertNotEquals(qty, 888);
+        assertEquals(qty, 888);
         assertTrue((qty > 0), "Error, es menor o igual a 0");
     }
 
     @Test
     void getUnitPrice() {
         double price = i.getUnitPrice();
-        assertNotEquals(price, 0.08);
+        assertEquals(price, 0.08);
         assertTrue((price > 0), "Error, es menor o igual a 0");
     }
 
@@ -61,7 +66,7 @@ class InvoiceItemTest {
         double unitprice = 1;
         i.setQty(qty);
         i.setUnitPrice(unitprice);
-        String salidaEsperada= "[id = A101, desc = Pen Red, qty = 222, unitPrice = 1]";
+        String salidaEsperada= "[id = A101, desc = Pen Red, qty = 222, unitPrice = 1.0]";
         assertEquals(salidaEsperada,i.toString(),"No sale el mismo texto en toString");
     }
 }

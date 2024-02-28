@@ -11,12 +11,9 @@ public class MovablePoint extends Point{
     }
 
     public MovablePoint(float xSpeed, float ySpeed) {
-        super();
+        super(1,1);
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
-    }
-
-    public MovablePoint() {
     }
 
     public float getxSpeed() {
@@ -35,7 +32,7 @@ public class MovablePoint extends Point{
         this.ySpeed = ySpeed;
     }
     public void setSpeed(float xSpeed, float ySpeed){
-        setX(xSpeed);
+        setxSpeed(xSpeed);
         setySpeed(ySpeed);
     }
     public float[] getSpeed(){
