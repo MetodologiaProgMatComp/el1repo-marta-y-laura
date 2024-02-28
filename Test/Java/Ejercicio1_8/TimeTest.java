@@ -71,6 +71,9 @@ class TimeTest {
         Time miObjeto = new Time(2, 50, 30);
         assertDoesNotThrow(miObjeto::nextSecond);
         assertEquals(31, miObjeto.getSecond(), "Mal nextSecondTime");
+        Time t = new Time(24, 60, 60);
+        assertDoesNotThrow(t::nextSecond);
+        assertEquals(0, t.getSecond(), "Mal nextSecondTime");
     }
 
     @Test
@@ -78,5 +81,9 @@ class TimeTest {
         Time miObjeto = new Time(2, 50, 30);
         assertDoesNotThrow(miObjeto::previousSecond);
         assertEquals(29, miObjeto.getSecond(), "Mal previusSecond");
+
+        Time t = new Time(-1, -1, -1);
+        assertDoesNotThrow(t::previousSecond);
+        assertEquals(59, t.getSecond(), "Mal previusSecond");
     }
 }

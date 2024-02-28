@@ -8,10 +8,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RectangleTest {
     Rectangle r= new Rectangle(4,2);
+    Rectangle r2 = new Rectangle();
     @Test
     void probarConstructoresRectangle() {
-        Rectangle r= new Rectangle(4,2);
         assertNotNull(r);
+        assertNotNull(r2);
     }
 
     @Test

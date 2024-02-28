@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DateTest {
     Date d= new Date(12,2, 2005);
+    Date d2= new Date(7,2, 2005);
     @Test
     void probarConstructoresDate() {
         Date d= new Date(12,2, 2005);
@@ -29,9 +30,9 @@ class DateTest {
 
     @Test
     void getYear() {
-        int year = d.getDay();
-        assertEquals(year, 12);
-        assertTrue((year >= 1900), "Error, es menor a 1999.");
+        int year = d.getYear();
+        assertEquals(year, 2005);
+        assertTrue((year >= 1900), "Error, es menor a 1900.");
         assertTrue((year <= 9999), "Error, es mayor a 9999.");
     }
 
@@ -66,5 +67,7 @@ class DateTest {
         d.setDate(27, 11, 2005);
         String salidaEsperada= "27/11/2005";
         assertEquals(salidaEsperada,d.toString(),"No sale el mismo texto en toString");
+        String salidaEsperada2= "07/02/2005";
+        assertEquals(salidaEsperada2,d2.toString(),"No sale el mismo texto en toString");
     }
 }

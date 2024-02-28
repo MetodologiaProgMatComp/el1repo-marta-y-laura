@@ -3,6 +3,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 class AcountTest {
+    Account miObjeto= new Account("78","Marta",6);
+    Account a = new Account("78","Marta");
+    @Test
+    void constructor(){
+        assertNotNull(miObjeto);
+        assertNotNull(a);
+    }
+
 
     @Test
     void getId() {
