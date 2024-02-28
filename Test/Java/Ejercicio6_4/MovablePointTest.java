@@ -1,5 +1,4 @@
-package Ejercicio6_3;
-
+package Ejercicio6_4;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -44,5 +43,3 @@ class MovablePointTest {
         assertEquals(5, mp.getX(), "No se ha movido");
     }
 }
-
-
