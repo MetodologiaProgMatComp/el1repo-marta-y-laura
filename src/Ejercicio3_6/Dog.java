@@ -4,11 +4,11 @@ public class Dog extends Mammal{
     public Dog(String name) {
         super(name);
     }
-    public void greets(){
-        System.out.println("Woof");
+    public String greets(){
+        return "Woof";
     }
-    public void greets(Dog another){
-        System.out.println("Woooof");
+    public String greets(Dog another){
+        return "Woooof" ;
     }
     public String toString() {
         return "Dog["+super.toString()+"]";

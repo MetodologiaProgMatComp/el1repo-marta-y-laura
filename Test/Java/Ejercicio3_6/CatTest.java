@@ -13,11 +13,11 @@ class CatTest {
     }
     @Test
      void greets() {
-        greets();
+        assertEquals(c.greets(), "Meow","No sale el mismo texto en toString");
     }
 
     @Test
     void testToString() {
-        assertEquals(c.toString(), "Cat[Mammal[Animal[name=Ciervo]]]","No sale el mismo texto en toString");
+        assertEquals(c.toString(), "Cat[Mammal[Animal[name=Whiskers]]]","No sale el mismo texto en toString");
     }
 }

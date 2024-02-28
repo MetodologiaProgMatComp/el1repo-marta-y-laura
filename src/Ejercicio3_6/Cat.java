@@ -5,8 +5,8 @@ public class Cat extends Mammal{
         super(name);
     }
 
-    public void greets(){
-        System.out.println("Meow");
+    public String greets(){
+        return "Meow";
     }
 
     @Override

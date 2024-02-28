@@ -40,7 +40,7 @@ class Circle2Test {
         double radius=4.3d;
         Circle2 s=new Circle2();
         s.setRadius(radius);
-        String salidaEsperada= "Circle[radius is 4.3]";
+        String salidaEsperada= "Circle[radius is = 4.3]";
         assertEquals(salidaEsperada,s.toString(),"No sale el mismo texto en toString");
     }
 }

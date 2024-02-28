@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DogTest {
     Dog d = new Dog("Bone");
+    Dog d1 = new Dog("Black");
     @Test
     void constructor(){
         Dog d = new Dog("Bone");
@@ -14,13 +15,12 @@ class DogTest {
 
     @Test
     void greets() {
-        d.greets();
+        assertEquals(d.greets(), "Woof","No sale el mismo texto en toString");
     }
 
     @Test
     void testGreets() {
-        Dog d2 = new Dog("Blanco");
-        d.greets(d2);
+        assertEquals(d.greets(d1), "Woooof","No sale el mismo texto en toString");
     }
 
     @Test

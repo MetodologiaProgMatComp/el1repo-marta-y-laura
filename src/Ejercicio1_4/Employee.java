@@ -20,7 +20,7 @@ public class Employee {
         return lastName;
     }
     public String getName(){
-        return "firstName lastName";
+        return getFirstName()+" "+getLastName();
     }
     public int getSalary(){
         return salary;
@@ -33,7 +33,7 @@ public class Employee {
         return salary*12;
     }
     public int raiseSalary(int percent){
-        return salary*percent;
+        return salary*percent/100;
     }
     public String toString(){
         return "Employee[id = "+id+", name = "+firstName+" "+lastName+", salary = "+salary+"]";

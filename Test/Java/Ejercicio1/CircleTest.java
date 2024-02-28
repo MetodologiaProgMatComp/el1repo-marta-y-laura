@@ -28,6 +28,7 @@ class CircleTest {
 
     @Test
     void getColor() {
+        Circle c = new Circle(1, "rojo");
         String color = c.getColor();
         assertEquals("rojo", color, "El color no es el esperado.");
     }
@@ -48,7 +49,7 @@ class CircleTest {
     void ToString() {
         double radius = c.getRadius();
         String color = c.getColor();
-        assertEquals("[radius= "+radius+", color= "+color+"]", "[radius= 1, color= rojo ]");
+        assertEquals("[radius= "+radius+", color= "+color+"]", "[radius= 1.0, color= rojo]");
     }
 
     @Test

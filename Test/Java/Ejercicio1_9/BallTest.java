@@ -14,34 +14,34 @@ class BallTest {
     @Test
     void getX() {
         float x = b.getX();
-        assertNotEquals(x, 4);
+        assertEquals(x, 4);
         assertTrue((x > 0), "Error, es menor o igual a 0");
     }
 
     @Test
     void getY() {
         float y = b.getY();
-        assertNotEquals(y, 2);
+        assertEquals(y, 2);
         assertTrue((y > 0), "Error, es menor o igual a 0");
     }
 
     @Test
     void getRadius() {
         int rad = b.getRadius();
-        assertNotEquals(rad, 5);
+        assertEquals(rad, 5);
         assertTrue((rad > 0), "Error, es menor o igual a 0");
     }
 
     @Test
     void getXDelta() {
         float xDel = b.getXDelta();
-        assertNotEquals(xDel, 1);
+        assertEquals(xDel, 1);
     }
 
     @Test
     void getYDelta() {
         float yDel = b.getYDelta();
-        assertNotEquals(yDel, 1);
+        assertEquals(yDel, 1);
     }
 
     @Test
@@ -59,7 +59,7 @@ class BallTest {
     @Test
     void setRadius() {
         b.setRadius(10);
-        assertEquals(b.getX(), 10, "El radio no ha cambiado.");
+        assertEquals(b.getRadius(), 10, "El radio no ha cambiado.");
     }
 
     @Test
@@ -106,7 +106,7 @@ class BallTest {
         b.setY(2);
         b.setXDelta(1);
         b.setYDelta(1);
-        String salidaEsperada= "[Ball[(4,2), speed=(1,1)]";
+        String salidaEsperada= "Ball[(4.0,2.0), speed=(1.0,1.0)]";
         assertEquals(salidaEsperada,b.toString(),"No sale el mismo texto en toString");
     }
 }

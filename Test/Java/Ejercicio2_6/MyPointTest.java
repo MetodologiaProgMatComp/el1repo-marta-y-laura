@@ -58,7 +58,7 @@ class MyPointTest {
     @org.junit.jupiter.api.Test
     void testToString() {
         p.setXY(4,2);
-        String salidaEsperada= "(4,2)";
+        String salidaEsperada= "(4, 2)";
         assertEquals(p.toString(),salidaEsperada,"No sale el mismo texto en toString");
     }
 
