@@ -1,6 +1,6 @@
 package Ejercicio6_3;
 
-public class MovablePoint {
+public class MovablePoint implements Movable {
     private int x;
     private int y;
     private final int xSpeed;
