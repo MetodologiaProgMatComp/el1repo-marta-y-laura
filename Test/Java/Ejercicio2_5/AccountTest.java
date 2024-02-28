@@ -1,6 +1,4 @@
 package Ejercicio2_5;
-
-import Ejercicio2_5.Customer1;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,6 +6,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class AccountTest {
     Customer1 c = new Customer1(11, "Marta", 'm');
     Account a = new Account(11, c, 30);
+    @Test
+    void probarConstructoresInvoice() {
+
+        Account c1 = new Account(11, c, 'm');
+        Account c2 = new Account(11, c);
+        assertNotNull(c1);
+        assertNotNull(c2);
+
+    }
 
     @Test
     void getId() {

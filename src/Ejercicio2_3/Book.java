@@ -1,9 +1,9 @@
 package Ejercicio2_3;
 
 public class Book {
-    private String isbn;
-    private String name;
-    private Ejercicio2_3.Author author;
+    private final String isbn;
+    private final String name;
+    private final Ejercicio2_3.Author author;
     private double price;
     private int qty=0;
 

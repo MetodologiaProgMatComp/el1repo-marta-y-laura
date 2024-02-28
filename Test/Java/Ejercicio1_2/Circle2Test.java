@@ -1,10 +1,21 @@
 package Ejercicio1_2;
 
+import Ejercicio1.Circle;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class Circle2Test {
+    @Test
+    void probarConstructoresCircle2() {
+
+        Circle2 c1 = new Circle2();
+        Circle2 c2 = new Circle2(3d);
+
+        assertNotNull(c1);
+        assertNotNull(c2);
+
+    }
     @Test
     void getRadio() {
         Circle2 miObjeto=new Circle2(3d);

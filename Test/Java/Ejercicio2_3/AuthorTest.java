@@ -1,11 +1,16 @@
 package Ejercicio2_3;
-
-import Ejercicio1.Circle;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class AuthorTest {
+    @Test
+    void probarConstructoresAuthor() {
+
+        Author c1 = new Author("Marta", "marta@gmail.com");
+        assertNotNull(c1);
+
+    }
     Author a= new Author("Marta", "marta@gmail.com");
 
     @Test

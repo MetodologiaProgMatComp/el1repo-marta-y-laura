@@ -1,7 +1,7 @@
 package Ejercicio2_5;
 
-public class Account {private int id;
-    private Customer1 customer;
+public class Account {private final int id;
+    private final Customer1 customer;
     private double balance = 0.0;
 
     public Account(int id, Customer1 customer, double balance) {

@@ -1,12 +1,11 @@
 package Ejercicio2_3;
-import Ejercicio2_3.Author;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class BookTest {
-    Author a= new Author("Marta", "marta@gmail.com");
     Book b = new Book("1234", "Hola", new Author("Marta", "marta@gmail.com"), 5, 13 );
+    @Test
     void probarConstructoresBook() {
 
         Book b1 = new Book("1234", "Hola", new Author("Marta", "marta@gmail.com"), 5);
@@ -70,7 +69,7 @@ class BookTest {
         String name= b.getName();
         Author author=b.getAuthor();
         int price= (int) b.getPrice();
-        int qty= (int) b.getQty();
+        int qty= b.getQty();
         assertEquals("Book[" + "isbn=1234, name=Hola, author=Author[name='Marta, email='marta@gmail.com], price=5, qty=13]", "Book[" + "isbn=" + isbn + ", name=" + name + ", author=" + author + ", price=" + price + ", qty=" + qty + "]");
     }
 }
