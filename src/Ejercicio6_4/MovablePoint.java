@@ -5,8 +5,6 @@ public class MovablePoint implements Movable {
     private int y;
     private final int xSpeed;
     private final int ySpeed;
-    private int aux;
-
     public MovablePoint(int x, int y, int xSpeed, int ySpeed){
         this.x = x;
         this.y = y;
@@ -40,18 +38,18 @@ public class MovablePoint implements Movable {
     }
 
     protected int getySpeed() {
-        return getySpeed();
+        return ySpeed;
     }
 
-    public void setY(int aux) {
-        this.aux=aux;
+    public void setY(int y) {
+        this.y=y;
     }
 
     protected int getxSpeed() {
-        return getxSpeed();
+        return xSpeed;
     }
 
-    protected void setX(int aux) {
-        this.aux=aux;
+    protected void setX(int x) {
+        this.x=x;
     }
 }

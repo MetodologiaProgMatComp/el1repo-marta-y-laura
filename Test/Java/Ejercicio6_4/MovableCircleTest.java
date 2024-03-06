@@ -9,7 +9,7 @@ class MovableCircleTest {
     MovableCircle mc= new MovableCircle(2, 1,2,1, 2);
     @Test
     void testToString() {
-        String salidaEsperada= "(0,0) speed=(0,0) radius=(2)";
+        String salidaEsperada= "(2,1) speed=(2,1) radius=(2)";
         assertEquals(salidaEsperada,mc.toString(),"No sale el mismo texto en toString");
     }
 
@@ -35,7 +35,7 @@ class MovableCircleTest {
     @Test
     void moveDown() {
         mc.moveDown();
-        assertEquals(0, mc.getY(), "No se ha movido");
+        assertEquals(2, mc.getY(), "No se ha movido");
     }
 
     @Test
@@ -47,6 +47,6 @@ class MovableCircleTest {
     @Test
     void moveRight() {
         mc.moveRight();
-        assertEquals(0, mc.getX(), "No se ha movido");
+        assertEquals(4, mc.getX(), "No se ha movido");
     }
 }
