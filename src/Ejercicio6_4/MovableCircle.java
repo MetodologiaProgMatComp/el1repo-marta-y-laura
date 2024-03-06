@@ -3,14 +3,15 @@ package Ejercicio6_4;
 
 public class MovableCircle extends MovablePoint {
     private int radius;
+    private MovablePoint center;
 
 
     public MovableCircle(int x, int y, int xSpeed, int ySpeed, int radius) {
         super(x, y, xSpeed, ySpeed);
-        this.radius = radius;
+        this.radius=radius;
+        this.center=new MovablePoint(x, y, xSpeed, ySpeed);
 
     }
-
     @Override
     public String toString() {
         return "(" + super.getX() + "," + super.getY() + ") speed=(" + super.getxSpeed() + "," + super.getySpeed()+ ") radius=(" + radius + ")";
