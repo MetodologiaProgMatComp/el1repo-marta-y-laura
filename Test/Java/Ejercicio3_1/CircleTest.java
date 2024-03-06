@@ -6,17 +6,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CircleTest {
     Circle c= new Circle (2, "azul");
-    @Test
-    void probarConstructoresCircle() {
-
-        Ejercicio1.Circle c1 = new Ejercicio1.Circle();
-        Ejercicio1.Circle c2 = new Ejercicio1.Circle(1);
-        Ejercicio1.Circle c3 = new Ejercicio1.Circle(1, "azul");
-
-        assertNotNull(c1);
-        assertNotNull(c2);
-        assertNotNull(c3);
-    }
 
     @Test
     void getRadius() {

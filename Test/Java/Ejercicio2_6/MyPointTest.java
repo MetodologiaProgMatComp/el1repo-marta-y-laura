@@ -7,10 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MyPointTest {
     MyPoint p= new MyPoint(4,2);
+    MyPoint p2= new MyPoint();
     @Test
     void constructor(){
-        MyPoint p= new MyPoint(4,2);
         assertNotNull(p);
+        assertNotNull(p2);
     }
     @Test
     void getX() {

@@ -8,11 +8,14 @@ class MyCircleTest {
     MyPoint ce= new MyPoint(2,2);
     MyCircle ci= new MyCircle(ce,4);
     MyCircle c3 = new MyCircle();
+    MyCircle c2= new MyCircle(1,1,4);
+
     @Test
     void constructor(){
         assertNotNull(ce);
         assertNotNull(c3);
         assertNotNull(ci);
+        assertNotNull(c2);
     }
     @Test
     void getRadius() {

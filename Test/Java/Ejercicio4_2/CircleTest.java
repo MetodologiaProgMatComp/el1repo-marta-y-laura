@@ -40,9 +40,7 @@ class CircleTest {
 
     @Test
     void testToString() {
-        double radius = c.getRadius();
-        String color = c.getColor();
-        assertEquals("[radius= "+radius+", color= "+color+"]", "[radius= 1.0, color= rojo]");
+        assertEquals( "[radius=1.0, color=rojo]",c.toString());
     }
 
     @Test

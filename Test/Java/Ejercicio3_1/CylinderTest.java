@@ -7,6 +7,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class CylinderTest {
     Circle c= new Circle (2, "azul");
     Cylinder cyl= new Cylinder(20);
+    Cylinder cy2 = new Cylinder();
+    Cylinder cy3 = new Cylinder(2,5);
+    @Test
+    void constructor(){
+        assertNotNull(c);
+        assertNotNull(cyl);
+        assertNotNull(cy2);
+        assertNotNull(cy3);
+    }
 
     @Test
     void getHeight() {

@@ -4,9 +4,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BookTest {
-    Book b = new Book("1234", "Hola", new Author("Marta", "marta@gmail.com"), 5, 13 );
+    Author a= new Author("Marta", "marta@gmail.com");
+    Book b = new Book("1234", "Hola", a, 5, 13 );
     @Test
-    void probarConstructoresBook() {
+    void probarConstructorsBook() {
 
         Book b1 = new Book("1234", "Hola", new Author("Marta", "marta@gmail.com"), 5);
 
@@ -14,6 +15,7 @@ class BookTest {
         Book b2 = new Book("1234", "Hola", new Author("Marta", "marta@gmail.com"), 5, 13 );
 
         assertNotNull(b2);
+        assertNotNull(a);
     }
 
     @Test
@@ -54,7 +56,7 @@ class BookTest {
     @Test
     void setQty() {
         b.setPrice(15);
-        assertEquals(b.getPrice(), 15, "La cantidad no ha cambiado.");
+        assertEquals(15, b.getPrice(), "La cantidad no ha cambiado.");
     }
 
     @Test
@@ -65,11 +67,6 @@ class BookTest {
 
     @Test
     void testToString() {
-        String isbn=b.getIsbn();
-        String name= b.getName();
-        Author author=b.getAuthor();
-        int price= (int) b.getPrice();
-        int qty= b.getQty();
-        assertEquals("Book[" + "isbn=1234, name=Hola, author=Author[name='Marta, email='marta@gmail.com], price=5, qty=13]", "Book[" + "isbn=" + isbn + ", name=" + name + ", author=" + author + ", price=" + price + ", qty=" + qty + "]");
+        assertEquals("Book[isbn='1234, name='Hola, author=Author[name='Marta, email='marta@gmail.com], price=5.0, qty=13]", b.toString());
     }
 }

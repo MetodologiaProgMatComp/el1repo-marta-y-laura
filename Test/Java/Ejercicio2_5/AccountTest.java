@@ -6,16 +6,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class AccountTest {
     Customer1 c = new Customer1(11, "Marta", 'm');
     Account a = new Account(11, c, 30);
+    Account a2 = new Account(11, c);
     @Test
-    void probarConstructoresInvoice() {
-
-        Account c1 = new Account(11, c, 'm');
-        Account c2 = new Account(11, c);
-        assertNotNull(c1);
-        assertNotNull(c2);
-
+    void constructors(){
+        assertNotNull(a);
+        assertNotNull(a2);
     }
-
     @Test
     void getId() {
         int id = a.getId();
@@ -63,5 +59,7 @@ class AccountTest {
     void withdraw() {
         assertDoesNotThrow(() -> a.withdraw(3.5));
         assertEquals(30 - 3.5, a.getBalance(), "gsg");
+        a.withdraw(2);
+        assertEquals(24.5, a.getBalance(), "gsg");
     }
 }

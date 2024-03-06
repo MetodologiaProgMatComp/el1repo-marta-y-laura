@@ -1,12 +1,16 @@
 package Ejercicio3_4;
-
-import Ejercicio3_3.Point2D;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class PointTest {
     Point p= new Point(2, 1);
+    Point p2 = new Point();
+    @Test
+    void constructors(){
+        assertNotNull(p);
+        assertNotNull(p2);
+    }
 
     @Test
     void getX() {

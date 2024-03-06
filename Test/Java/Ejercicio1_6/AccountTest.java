@@ -2,7 +2,15 @@ package Ejercicio1_6;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-class AcountTest {
+class AccountTest {
+    Account miObjeto= new Account("78","Marta",6);
+    Account a = new Account("78","Marta");
+    @Test
+    void constructor(){
+        assertNotNull(miObjeto);
+        assertNotNull(a);
+    }
+
 
     @Test
     void getId() {
@@ -20,6 +28,7 @@ class AcountTest {
     @Test
     void getBalance() {
         Account miObjeto= new Account("78","Marta",6);
+        assertEquals(6, miObjeto.getBalance());
     }
 
     @Test
@@ -28,6 +37,14 @@ class AcountTest {
         assertDoesNotThrow(()->miObjeto.credit(25));
         assertEquals(6+25,miObjeto.getBalance(),"Mal el credito");
 
+    }
+    @Test
+    void debit(){
+        Account miObjeto= new Account("78","Marta",6);
+        miObjeto.debit(4);
+        assertEquals(2, miObjeto.debit(4));
+        Account miObjeto2= new Account("78","Marta",6);
+        assertEquals(6, miObjeto2.debit(8));
     }
 
     @Test
